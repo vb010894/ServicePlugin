@@ -1,0 +1,33 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="D:/Projects/SumsungAPI">
+          <value>
+            <RecentProjectMetaInfo frameTitle="SumsungAPI – workspace.xml" opened="true" projectWorkspaceId="1wtHi8qPUTQoGlZbALn5Wa7WSsV">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="IC-212.4746.92" />
+              <option name="buildTimestamp" value="1627369731522" />
+              <frame x="1912" y="-6" width="1936" height="1056" extendedState="6" />
+              <option name="productionCode" value="IC" />
+              <option name="projectOpenTimestamp" value="1633075834478" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="groups">
+      <list>
+        <ProjectGroup>
+          <option name="bottomGroup" value="true" />
+          <option name="name" value="Eclipse Projects" />
+          <option name="projects">
+            <list>
+              <option value="C:\Users\Vboy\JaspersoftWorkspace\MyReports" />
+            </list>
+          </option>
+        </ProjectGroup>
+      </list>
+    </option>
+  </component>
+</application>

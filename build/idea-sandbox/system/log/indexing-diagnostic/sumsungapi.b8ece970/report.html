@@ -1,0 +1,102 @@
+<html><head><title>Indexing diagnostics of &#39;SumsungAPI&#39;</title><style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 80%;
+}
+
+table.two-columns td {
+  width: 50%;
+}
+
+th, td {
+  padding: 3px;
+}
+
+th {
+  background: lightgrey;
+}
+
+td {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+        
+.stats-content {
+  margin-left: 20%;
+}
+
+.aggregate-report-content {
+  margin-left: 10%;
+}
+
+.navigation-bar {
+  width: 15%;
+  background-color: lightgrey;
+  position: fixed;
+  height: 100%;
+}
+
+div.navigation-bar ul {
+  list-style-type: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+div.navigation-bar ul li a, label {
+  display: block;
+  color: #000;
+  padding: 8px 20px;
+  text-decoration: none;
+}
+
+label input {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+div.navigation-bar ul li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.minor-data {}
+
+.invisible {
+  display: none;
+}
+
+.jetbrains-logo {
+  width: 50%;
+  bottom: 5%;
+  position: absolute;
+  left: 20%;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.linkable-table-row:hover {
+  background: #f2f3ff;
+  outline: none;
+  cursor: pointer;
+}</style><script>document.addEventListener("DOMContentLoaded", () => {
+  const rows = document.getElementsByClassName("linkable-table-row")
+  for (const row of rows) {
+    const href = row.getAttribute("href")
+    row.addEventListener("click", () => {
+      window.open(href, "_blank");
+    });
+  }
+});</script></head><body><div class="aggregate-report-content"><h1>Project name</h1>SumsungAPI<div><h1>Indexing history</h1><table class="centered-text"><caption style="caption-side: bottom; text-align: right; font-size: 14px">Hover for details</caption><thead><tr><th colspan="6">Time</th><th colspan="6">Files</th><th rowspan="2">IDE</th></tr><tr><th>Started</th><th>Total</th><th>Scanning</th><th>Indexing</th><th>Content loading</th><th>Finished</th><th>Providers</th><th>Scanned</th><th>Shared indexes (w/o content loading)</th><th>Scheduled for indexing</th><th>Shared indexes (content loaded)</th><th>Total indexed (shared indexes included)</th></tr></thead><tbody><tr class="linkable-table-row" href="diagnostic-2021-10-29-13-16-36.470.html"><td><strong>Project roots have changed</strong><br/>13:14:59 29 окт.</td><td>1 m 37 s 240 ms</td><td>26 s 803 ms</td><td>52 s 575 ms</td><td>6 s 169 ms</td><td>13:16:36 29 окт.</td><td>102</td><td>95062</td><td>2549</td><td>87969</td><td>50312</td><td>87969</td><td>IC-212.4746.92</td></tr></tbody></table></div><div><h1>Shared Indexes</h1><table><thead><tr><th>Time</th><th>Kind</th><th>Name</th><th>Size</th><th>Download time</th><th>Download speed</th><th>Status</th><th>ID</th></tr></thead><tbody><tr><td>13:15:44 29 окт.</td><td>15.0.2</td><td>15.0.2-corretto-15.0.2</td><td>23,13 MB</td><td>3 s 371 ms</td><td>6,86 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>15.0.2-corretto-15.0.2-6784eca8bff2770ad8ed2e23e30de9681192f96ec56dcb969f822592a2c518d8-603370864728</td></tr><tr><td>13:15:41 29 окт.</td><td>org_springframework_spring_webmvc_5_3_7</td><td>org_springframework_spring_webmvc_5_3_7</td><td>3,11 MB</td><td>1 s 193 ms</td><td>2,61 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_springframework_spring_webmvc_5_3_7-01e7f6e17b864ee4dfc53b2a1064bb5b6308aa8b28af066cbaabaa2fec6db38e-644129cc9303</td></tr><tr><td>13:15:39 29 окт.</td><td>org_springframework_boot_spring_boot_2_5_0</td><td>org_springframework_boot_spring_boot_2_5_0</td><td>2,51 MB</td><td>900 ms</td><td>2,79 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_springframework_boot_spring_boot_2_5_0-9f04cdf1559bb65f8579d37656d72df6300c8716c081b072d38324fe89aed5e8-124693173b7b</td></tr><tr><td>13:15:38 29 окт.</td><td>org_springframework_spring_context_5_3_7</td><td>org_springframework_spring_context_5_3_7</td><td>1,93 MB</td><td>739 ms</td><td>2,61 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_springframework_spring_context_5_3_7-be1b854924485328760b829f9e8504087dd1291d916aa39707e7ac4779e43360-124693173b7b</td></tr><tr><td>13:15:34 29 окт.</td><td>org_mockito_mockito_junit_jupiter_3_12_4</td><td>org_mockito_mockito_junit_jupiter_3_12_4</td><td>1,62 MB</td><td>708 ms</td><td>2,29 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_mockito_mockito_junit_jupiter_3_12_4-c706282af5dec26fe312974c224155488a5e679d3a4c8df78bdb0b31eafd54de-603370864728</td></tr><tr><td>13:15:33 29 окт.</td><td>org_mockito_mockito_core_3_12_4</td><td>org_mockito_mockito_core_3_12_4</td><td>1,46 MB</td><td>711 ms</td><td>2,05 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_mockito_mockito_core_3_12_4-7049c3cdde6f3d230114a7a68232b05990be6552ab643e6b39e40b3f83a31890-603370864728</td></tr><tr><td>13:15:32 29 окт.</td><td>org_springframework_spring_aop_5_3_9</td><td>org_springframework_spring_aop_5_3_9</td><td>1,3 MB</td><td>1 s 161 ms</td><td>1,12 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_springframework_spring_aop_5_3_9-932d84b03cc4ca78e9703cc0eae6dc2b242c8b0b3dd1220b4f4b2bcbce26ed42-2d53250d4c35</td></tr><tr><td>13:15:31 29 окт.</td><td>org_springframework_spring_beans_5_3_7</td><td>org_springframework_spring_beans_5_3_7</td><td>1,06 MB</td><td>747 ms</td><td>1,41 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_springframework_spring_beans_5_3_7-579acd2441076bae0cc19fb412273e0563209f5b32225e802f25199ebbd06ac2-124693173b7b</td></tr><tr><td>13:15:30 29 окт.</td><td>com_fasterxml_jackson_core_jackson_databind_2_12_3</td><td>com_fasterxml_jackson_core_jackson_databind_2_12_3</td><td>1,05 MB</td><td>600 ms</td><td>1,76 MB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>com_fasterxml_jackson_core_jackson_databind_2_12_3-0f520a4820a0675eaab9967109b7edc6779a26c9572db8a76a9d51c258899a42-2d53250d4c35</td></tr><tr><td>13:15:27 29 окт.</td><td>org_springframework_spring_core_5_3_7</td><td>org_springframework_spring_core_5_3_7</td><td>718,55 kB</td><td>1 s 739 ms</td><td>412,99 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_springframework_spring_core_5_3_7-5138bc070b82f3236c43803b087fccb4c86fc2196ce8dc37527c50428c47c70b-124693173b7b</td></tr><tr><td>13:15:25 29 окт.</td><td>io_micrometer_micrometer_core_1_7_0</td><td>io_micrometer_micrometer_core_1_7_0</td><td>450,78 kB</td><td>698 ms</td><td>645,45 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>io_micrometer_micrometer_core_1_7_0-d0a9a136cb9a3da0f564594578ef828ac7849fc6ad03f595341f9cdc583ceab2-7a2556f594ae</td></tr><tr><td>13:15:24 29 окт.</td><td>org_projectlombok_lombok_1_18_20</td><td>org_projectlombok_lombok_1_18_20</td><td>417,2 kB</td><td>695 ms</td><td>599,55 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_projectlombok_lombok_1_18_20-ecd45ab1dec4ac5e9e49c86f3020e211601c7bc425c7f390c7c639b811130e44-603370864728</td></tr><tr><td>13:15:23 29 окт.</td><td>com_jayway_jsonpath_json_path_2_5_0</td><td>com_jayway_jsonpath_json_path_2_5_0</td><td>385 kB</td><td>448 ms</td><td>858,03 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>com_jayway_jsonpath_json_path_2_5_0-86548540def88841f031db6d8590761eebcef27a2973c813e604c3bb92a53811-7efae00039bd</td></tr><tr><td>13:15:22 29 окт.</td><td>org_junit_jupiter_junit_jupiter_params_5_7_2</td><td>org_junit_jupiter_junit_jupiter_params_5_7_2</td><td>383,93 kB</td><td>460 ms</td><td>832,82 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_junit_jupiter_junit_jupiter_params_5_7_2-1c8fd809651ba42e9f0c2baeabcc5002b55305254cbe3d511433c9de83ed3584-2d53250d4c35</td></tr><tr><td>13:15:22 29 окт.</td><td>org_junit_jupiter_junit_jupiter_engine_5_7_1</td><td>org_junit_jupiter_junit_jupiter_engine_5_7_1</td><td>372,93 kB</td><td>453 ms</td><td>821,52 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_junit_jupiter_junit_jupiter_engine_5_7_1-4f3f14044f90273872db30ded686e7aef42831836a2c5dc1c5cb0e0fb6dc257d-2d53250d4c35</td></tr><tr><td>13:15:21 29 окт.</td><td>com_fasterxml_jackson_core_jackson_core_2_12_3</td><td>com_fasterxml_jackson_core_jackson_core_2_12_3</td><td>272,12 kB</td><td>411 ms</td><td>661,47 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>com_fasterxml_jackson_core_jackson_core_2_12_3-73a176406e11d0d7deebed97a45f7d10a0fa5150e7fd59168d0094d3c7c614e7-2d53250d4c35</td></tr><tr><td>13:15:21 29 окт.</td><td>org_junit_jupiter_junit_jupiter_api_5_8_1</td><td>org_junit_jupiter_junit_jupiter_api_5_8_1</td><td>213,49 kB</td><td>1 s 551 ms</td><td>137,63 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>org_junit_jupiter_junit_jupiter_api_5_8_1-1ba5b3e5b4f155db00beb536ee6dfda5127a5e8689d11ed671b3e6860f69532d-603370864728</td></tr><tr><td>13:15:19 29 окт.</td><td>javax_persistence_javax_persistence_api_2_2</td><td>javax_persistence_javax_persistence_api_2_2</td><td>179,3 kB</td><td>387 ms</td><td>463,08 kB/s</td><td>success FB: 100,0%, Stub: 100,0%</td><td>javax_persistence_javax_persistence_api_2_2-b7a7963be820b2243b92b0fa14fbc8cbce58f8e5393fd13eff0baff404f00033-603370864728</td></tr></tbody></table></div></div></body></html>

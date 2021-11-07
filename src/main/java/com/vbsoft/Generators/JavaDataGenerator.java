@@ -2,6 +2,7 @@ package com.vbsoft.Generators;
 
 import com.intellij.openapi.ui.Messages;
 import com.intellij.psi.PsiDirectory;
+import com.vbsoft.models.entity.EntityModel;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;

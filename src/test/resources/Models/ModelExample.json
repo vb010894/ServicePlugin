@@ -1,0 +1,10 @@
+{
+    "className": "User",
+    "table": {
+        "name": "Usr"
+    },
+    "fields": [{
+        "name": "age",
+        "type": "Integer"
+    }]
+}

@@ -323,7 +323,7 @@
         "plugin_version" : [ "{util#plugin_version}" ]
       },
       "enums" : {
-        "__event_id" : [ "RunBuildAction", "ExecuteMavenRunConfigurationAction", "ExtractManagedDependenciesAction", "IntroducePropertyAction", "ShowMavenConnectors", "KillMavenConnector", "StartLocalMavenServer", "StartWslMavenServer" ]
+        "__event_id" : [ "RunBuildAction", "ExecuteMavenRunConfigurationAction", "ExtractManagedDependenciesAction", "IntroducePropertyAction", "ShowMavenConnectors", "KillMavenConnector", "StartLocalMavenServer", "StartWslMavenServer", "CreateMavenProjectOrModuleFromArchetype", "CreateMavenProjectOrModule" ]
       }
     }
   }, {
@@ -2017,7 +2017,8 @@
     "id" : "kotlin.gradle.target",
     "builds" : [ ],
     "versions" : [ {
-      "from" : "1"
+      "from" : "1",
+      "to" : "3"
     } ],
     "rules" : {
       "event_id" : [ "{enum#_}" ],
@@ -4368,10 +4369,13 @@
       "from" : "1"
     } ],
     "rules" : {
-      "event_id" : [ "commit.count.{regexp#count}", "branches.count.{regexp#count}", "users.count.{regexp#count}", "third.party.root.count.{regexp#count}", "{enum#vcs}.root.count.{regexp#count}", "{enum:dataInitialized}", "{enum:commit.count|branches.count|users.count|root.count}" ],
+      "event_id" : [ "commit.count.{regexp#count}", "branches.count.{regexp#count}", "users.count.{regexp#count}", "third.party.root.count.{regexp#count}", "{enum#vcs}.root.count.{regexp#count}", "{enum#__event_id}" ],
       "event_data" : {
         "count" : [ "{regexp#integer}" ],
         "vcs" : [ "{enum#vcs}", "{enum:third.party}" ]
+      },
+      "enums" : {
+        "__event_id" : [ "commit.count", "branches.count", "users.count", "root.count", "dataInitialized" ]
       }
     }
   }, {
@@ -4411,11 +4415,11 @@
       "from" : "1"
     } ],
     "rules" : {
-      "event_id" : [ "log.Go_to_{enum#_}_Commit.Select_from_Popup", "history.Go_to_{enum#_}_Commit.Select_from_Popup", "log.{enum#vcs_trigger}", "history.{enum#vcs_trigger}", "{enum#vcs_trigger}", "{util#vcs_log_trigger_event_id}" ],
+      "event_id" : [ "log.Go_to_{enum#_}_Commit.Select_from_Popup", "history.Go_to_{enum#_}_Commit.Select_from_Popup", "log.{enum#vcs_trigger}", "history.{enum#vcs_trigger}", "{enum#vcs_trigger}", "{util#vcs_log_trigger_event_id}", "{enum#__event_id}" ],
       "event_data" : {
         "class" : [ "{util#class_name}" ],
         "context" : [ "{enum:history|log}" ],
-        "filter_name" : [ "{util#vcs_log_filter_name}" ],
+        "filter_name" : [ "{enum:branch|revision|range|user|hash|date|text|structure|roots}" ],
         "has_revision" : [ "{enum#boolean}" ],
         "input_event" : [ "{util#shortcut}" ],
         "kind" : [ "{enum:multiple|folder|file}" ],
@@ -4424,6 +4428,7 @@
       },
       "enums" : {
         "_" : [ "Parent", "Child" ],
+        "__event_id" : [ "action.called", "tab.navigated", "column.reset", "table.clicked", "filter.set", "history.shown" ],
         "vcs_trigger" : [ "com.intellij.vcs.log.ui.actions.RefreshLogAction", "com.intellij.vcs.log.ui.actions.GoToHashOrRefAction", "VcsLogCreatePatchActionProvider$Dialog", "VcsLogCreatePatchActionProvider$Clipboard", "UserFilterSet", "ToggleLogColumnsActionGroup$ToggleColumnAction", "TextFilterSet", "StructureFilterSet", "ShowDiffAfterWithLocalFromLogActionProvider", "ShowCommitTooltipAction", "RootsFilterSet", "RootColumnClick", "RefreshLogAction", "Refresh", "RangeFilterSet", "OpenAnotherLogTabAction", "HashFilterSet", "GraphNodeClick", "GraphArrowClick", "Go_to_Parent_Commit.Select_from_Popup", "Go_to_Child_Commit.Select_from_Popup", "Go_To_Hash/Branch/Tag", "GoToParentRowAction", "GoToHashOrRefAction", "GoToChildRowAction", "FocusTextFilterAction", "Expand_Linear_Branches", "ExpandGraphAction", "DeepCompareAction", "DateFilterSet", "CompareRevisionsFromLogAction", "CollapseGraphAction", "BranchFilterSet", "com.intellij.vcs.log.ui.actions.history.CompareRevisionsFromFileHistoryActionProvider", "Show_Diff", "ShowDiffAfterWithLocalFromFileHistoryActionProvider", "ShowAllAffectedFromHistoryAction", "OpenRepositoryVersionFromHistoryAction", "GetVersionFromHistoryAction", "CreatePatchFromHistoryActionProvider$Dialog", "Compare_with_Local", "CompareRevisionsFromFolderHistoryActionProvider", "CompareRevisionsFromFileHistoryActionProvider", "AnnotateRevisionFromHistoryAction", "TableRowClick", "TabNavigation", "ShowFolderHistory", "ShowFileHistoryForRevision", "ShowFileHistory", "ColumnWidthReset" ]
       }
     }
@@ -4581,5 +4586,5 @@
       "version" : "Unknown|unknown.format|unknown|UNKNOWN|((\\d+\\.?)*\\d+)"
     }
   },
-  "version" : "2166"
+  "version" : "2176"
 }

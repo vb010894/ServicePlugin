@@ -6,15 +6,12 @@ import com.intellij.openapi.ui.Messages;
 import com.intellij.psi.PsiDirectory;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.impl.file.PsiDirectoryFactory;
-import com.vbsoft.Generators.ClassSpecification;
-import com.vbsoft.Generators.FieldSpecification;
 import com.vbsoft.Generators.JavaDataGenerator;
 import com.vbsoft.Utils.ServicePluginUtils;
+import com.vbsoft.models.entity.EntityModel;
 import org.apache.commons.io.FileUtils;
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -41,9 +38,6 @@ public class ModelGenerator extends AnAction {
         PsiDirectory root = PsiDirectoryFactory.getInstance(Objects.requireNonNull(e.getProject())).createDirectory(e.getProject().getBaseDir());
         PsiDirectory outputRoot = ServicePluginUtils.findDirectory(root, "src/main/java");
         this.fResource = ServicePluginUtils.findDirectory(root, "src/main/resources").findSubdirectory("Models");
-        List<JSONObject> jsons = this.getJsonData();
-        if (jsons.isEmpty())
-            return;
 
         Properties structureMap = new Properties();
         try {
@@ -56,8 +50,7 @@ public class ModelGenerator extends AnAction {
             return;
         }
 
-        List<ClassSpecification> specifications = new ArrayList<>();
-        jsons.forEach(j -> specifications.add(this.jsonToSpecification(j, (String) structureMap.get("path.models"))));
+        List<EntityModel> specifications = this.getJsonData();
 
         if (specifications.isEmpty()) {
             Messages.showMessageDialog(
@@ -79,26 +72,12 @@ public class ModelGenerator extends AnAction {
                     Messages.getErrorIcon());
         }
 
-        String classNames = specifications.stream().map(ClassSpecification::getName).collect(Collectors.joining(",\n"));
+        String classNames = specifications.stream().map(EntityModel::getClassName).collect(Collectors.joining(",\n"));
         Messages.showMessageDialog(
                 new String(("Модели успешно созданы:\n " + classNames).getBytes(), StandardCharsets.UTF_8),
                 new String("Создвние моделей".getBytes(), StandardCharsets.UTF_8),
                 Messages.getInformationIcon());
 
-    }
-
-    private ClassSpecification jsonToSpecification(JSONObject jsonObject, String pack) {
-        String className = jsonObject.getString("name");
-        JSONArray jsonFields = jsonObject.getJSONArray("fields");
-        List<FieldSpecification> fields =  new LinkedList<>();
-        jsonFields.forEach(f -> {
-            JSONObject temp = (JSONObject) f;
-            fields.add(new FieldSpecification(temp.getString("name"), temp.getString("type")));
-        });
-        ClassSpecification s = new ClassSpecification(className, fields);
-        s.setPack(pack);
-
-        return s;
     }
 
     /**
@@ -129,17 +108,17 @@ public class ModelGenerator extends AnAction {
      * Get model definition as JSON files.
      * @return Json definitions
      */
-    private List<JSONObject> getJsonData() {
+    private List<EntityModel> getJsonData() {
         List<PsiFile> files = this.getPSIModelDefinitions();
         if (files.isEmpty())
             return new LinkedList<>();
 
-        List<JSONObject> fileData = new LinkedList<>();
+        List<EntityModel> fileData = new LinkedList<>();
         AtomicReference<Throwable> throwFlag = new AtomicReference<>();
         files.forEach(f -> {
             try {
                 String data = FileUtils.readFileToString(new File(f.getVirtualFile().getPath()), StandardCharsets.UTF_8);
-                fileData.add(new JSONObject(data));
+                fileData.add(ServicePluginUtils.fillModel(EntityModel.class, data));
             } catch (IOException | JSONException ex) {
                 throwFlag.set(ex);
             }

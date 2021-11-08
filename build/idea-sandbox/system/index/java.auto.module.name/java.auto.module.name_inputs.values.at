@@ -1,16 +1,0 @@
-/Header Record For PersistentHashMapValueStorage
-opentest4japiguardian.apijunit.jupiter.api
-opentest4japiguardian.apijunit.platform.commonsspring.boot.starter.webspring.boot.starter.webspring.boot.starterspring.boot.starterjunit.platform.commonsspring.bootspring.boot.autoconfigurejunit.jupiter.apispring.boot.starter.loggingspring.boot.starter.logginglogback.classiclogback.corelogback.classiclog4j.to.slf4jlogback.coreorg.apache.logging.slf4jspring.boot.autoconfigure	log4j.apispring.boot	log4j.apijul.to.slf4jjakarta.annotation.apijul.to.slf4j	snakeyamljava.annotationspring.boot.starter.jsonspring.boot.starter.jsonjackson.datatype.jdk8org.yaml.snakeyamljackson.datatype.jdk8jackson.datatype.jsr310jackson.datatype.jsr310!jackson.module.parameter.namesspring.boot.starter.tomcat!jackson.module.parameter.namesspring.boot.starter.tomcattomcat.embed.coretomcat.embed.eltomcat.embed.eltomcat.embed.websocket
-spring.webspring.beanstomcat.embed.websocketspring.webmvcspring.beansspring.webmvc
-spring.aop
-spring.web
-spring.aoptomcat.embed.corespring.expressionspring.contextspring.expressionspring.boot.starter.testspring.boot.starter.testspring.boot.test!spring.boot.test.autoconfigurespring.boot.test!spring.boot.test.autoconfigure	json.pathspring.context	json.path
-json.smart
-json.smartaccessors.smartasmaccessors.smartasm	slf4j.api	org.slf4jjakarta.xml.bind.apijakarta.activation.apijakarta.activation.apijakarta.xml.bind.apiassertj.corehamcrestorg.hamcrestjunit.jupiterjunit.jupiterjunit.jupiter.paramsjunit.jupiter.enginejunit.jupiter.paramsjunit.platform.engineassertj.corejunit.jupiter.enginejunit.platform.enginemockito.corebyte.buddy.agentbyte.buddy.agent	objenesisorg.objenesismockito.junit.jupiterorg.mockito.junit.jupiter
-jsonassert
-jsonassertandroid.jsonandroid.json
-spring.jclspring.core
-spring.jclspring.testorg.mockitospring.testspring.corexmlunit.coreorg.xmlunitspring.boot.starter.actuator%"spring.boot.actuator.autoconfigurespring.boot.actuatormicrometer.coreHdrHistogramLatencyUtilsjava.persistenceorg.hibernate.orm.corejava.transactionorg.jboss.jandexcom.fasterxml.classmate$!org.hibernate.commons.annotationsjaxb.apiorg.jboss.logging
-byte.buddyjava.activationjaxb.runtime
-byte.buddytxw2istack.commons.runtimejakarta.activation	antlr4org.antlr.antlr4.runtimeantlr.runtimeST4org.abego.treelayout.core
-javax.jsonicu4jjackson.dataformat.xmljackson.corejackson.corejackson.annotationsjackson.annotationsjackson.databindjackson.databind"jackson.module.jaxb.annotationsorg.codehaus.stax2woodstox.core	lombokjtdsreflections	javassist

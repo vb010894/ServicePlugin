@@ -1,2 +1,0 @@
-{"recorder_version":"4","session":"21102910-33d564983a04","build":"212.4746.92","bucket":"38","time":1635502659109,"group":{"id":"mlse.event.log","version":"4"},"event":{"count":1,"data":{"created":1635502659111,"system_event_id":17,"version":"2162.0"},"id":"metadata.loaded"}}
-{"recorder_version":"4","session":"21102910-33d564983a04","build":"212.4746.92","bucket":"38","time":1635502659768,"group":{"id":"mlse.event.log","version":"4"},"event":{"count":1,"data":{"created":1635502659768,"system_event_id":18,"version":"2166.0"},"id":"metadata.updated"}}

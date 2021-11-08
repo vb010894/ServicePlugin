@@ -8578,8 +8578,10 @@
     <option name="your" hit="Get updates automatically  open your projects with one click  discover other JetBrains products  and more" />
     <option name="ic" hit="IC             July         " />
     <option name="july" hit="IC             July         " />
-    <option name="checked" hit="Last checked                 " />
-    <option name="last" hit="Last checked                 " />
+    <option name="ago" hit="Last checked     minutes ago" />
+    <option name="checked" hit="Last checked     minutes ago" />
+    <option name="last" hit="Last checked     minutes ago" />
+    <option name="minutes" hit="Last checked     minutes ago" />
     <option name="after" hit="Show What s New in the editor after an IDE update" />
     <option name="an" hit="Show What s New in the editor after an IDE update" />
     <option name="editor" hit="Show What s New in the editor after an IDE update" />

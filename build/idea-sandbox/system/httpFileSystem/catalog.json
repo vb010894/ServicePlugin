@@ -11,12 +11,34 @@
       "url": "https://raw.githubusercontent.com/adonisjs/application/master/adonisrc.schema.json"
     },
     {
+      "name": ".agripparc.json",
+      "description": "JSON schema for the Agrippa config file",
+      "fileMatch": [
+        "agripparc.json"
+      ],
+      "url": "https://json.schemastore.org/agripparc-1.2.json"
+    },
+    {
       "name": ".aiproj.json",
       "description": "Settings for project analysis by the application inspector",
       "fileMatch": [
         ".aiproj.json"
       ],
       "url": "https://json.schemastore.org/aiproj.json"
+    },
+    {
+      "name": "Airlock Microgateway",
+      "description": "Airlock Microgateway configuration schema",
+      "url": "https://json.schemastore.org/airlock-microgateway-3.0.json",
+      "fileMatch": [
+        "microgateway-config.yaml",
+        "microgateway-config.yml",
+        "airlock-microgateway-config.yaml",
+        "airlock-microgateway-config.yml"
+      ],
+      "versions": {
+        "3.0": "https://json.schemastore.org/airlock-microgateway-3.0.json"
+      }
     },
     {
       "name": "angular.json",
@@ -387,7 +409,7 @@
       "fileMatch": [
         "bsconfig.json"
       ],
-      "url": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/8.2.0/docs/docson/build-schema.json"
+      "url": "https://raw.githubusercontent.com/rescript-lang/rescript-compiler/master/docs/docson/build-schema.json"
     },
     {
       "name": "Bukkit plugin.yml",
@@ -444,6 +466,14 @@
         "bungee.yml"
       ],
       "url": "https://json.schemastore.org/bungee-plugin.json"
+    },
+    {
+      "name": "block.json",
+      "description": "Schema WordPress block.json files",
+      "fileMatch": [
+          "block.json"
+      ],
+      "url": "https://json.schemastore.org/block.json"
     },
     {
       "name": "CMake Presets",
@@ -674,7 +704,7 @@
         "cloudformation.yml",
         "cloudformation.yaml"
       ],
-      "url": "https://raw.githubusercontent.com/awslabs/goformation/v5.2.9/schema/cloudformation.schema.json"
+      "url": "https://raw.githubusercontent.com/awslabs/goformation/v5.2.11/schema/cloudformation.schema.json"
     },
     {
       "name": "AWS CloudFormation Serverless Application Model (SAM)",
@@ -688,7 +718,7 @@
         "sam.yml",
         "sam.yaml"
       ],
-      "url": "https://raw.githubusercontent.com/awslabs/goformation/v5.2.9/schema/sam.schema.json"
+      "url": "https://raw.githubusercontent.com/awslabs/goformation/v5.2.11/schema/sam.schema.json"
     },
     {
       "name": "Citation File Format",
@@ -768,9 +798,15 @@
       "fileMatch": [
         ".cspell.json",
         "cspell.json",
-        "cSpell.json"
+        ".cSpell.json",
+        "cSpell.json",
+        "cspell.config.json",
+        "cspell.config.yaml",
+        "cspell.config.yml",
+        "cspell.yaml",
+        "cspell.yml"
       ],
-      "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/cspell4/cspell.schema.json"
+      "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json"
     },
     {
       "name": ".csscomb.json",
@@ -1372,6 +1408,17 @@
       "url": "https://raw.githubusercontent.com/j2inn/hayson/master/hayson-json-schema.json"
     },
     {
+      "name": "Hazelcast 5 Configuration",
+      "description": "YAML schema for configuring Hazelcast 5 Platform (member and client)",
+      "fileMatch": [
+        "hazelcast*.yaml",
+        "hazelcast*.json",
+        "hz-*.yaml",
+        "hz-*.json"
+      ],
+      "url": "https://hazelcast.com/schema/config/hazelcast-config-5.0.json"
+    },
+    {
       "name": "host.json",
       "description": "JSON schema for Azure Functions host.json files",
       "fileMatch": [
@@ -1472,7 +1519,7 @@
         "*filespec*.json",
         "*.filespec"
       ],
-      "url": "https://raw.githubusercontent.com/jfrog/jfrog-cli/master/schema/filespec-schema.json"
+      "url": "https://raw.githubusercontent.com/jfrog/jfrog-cli/v2/schema/filespec-schema.json"
     },
     {
       "name": "Jovo Language Models",
@@ -1681,21 +1728,23 @@
       "url": "https://json.schemastore.org/lsdlschema.json"
     },
     {
-      "name": "Mega-Linter configuration",
+      "name": "MegaLinter configuration",
       "description": "JSON schema for Mega-Linter configuration file (for Mega-Linter users)",
       "fileMatch": [
         ".mega-linter.yml",
-        "*.mega-linter-config.yml"
+        ".megalinter.yml",
+        "*.mega-linter-config.yml",
+        "*.megalinter-config.yml"
       ],
-      "url": "https://raw.githubusercontent.com/nvuillam/mega-linter/master/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json"
+      "url": "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-configuration.jsonschema.json"
     },
     {
-      "name": "Mega-Linter descriptor",
-      "description": "JSON schema for Mega-Linter descriptor files (for Mega-Linter contributors)",
+      "name": "MegaLinter descriptor",
+      "description": "JSON schema for MegaLinter descriptor files (for MegaLinter contributors)",
       "fileMatch": [
         "*.megalinter-descriptor.yml"
       ],
-      "url": "https://raw.githubusercontent.com/nvuillam/mega-linter/master/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json"
+      "url": "https://raw.githubusercontent.com/megalinter/megalinter/main/megalinter/descriptors/schemas/megalinter-descriptor.jsonschema.json"
     },
     {
       "name": "Microsoft Band Web Tile",
@@ -2005,6 +2054,14 @@
         "kratos.toml"
       ],
       "url": "https://raw.githubusercontent.com/ory/kratos/master/.schema/version.schema.json"
+    },
+    {
+      "name": "OSS Review Toolkit repository configuration",
+      "description": "Schema for ORT's repository configuration file",
+      "fileMatch": [
+        "*.ort.yml"
+      ],
+      "url": "https://raw.githubusercontent.com/oss-review-toolkit/ort/master/integrations/schemas/repository-configuration-schema.json"
     },
     {
       "name": "package.json",
@@ -2559,6 +2616,14 @@
         "staticwebapp.config.json"
       ],
       "url": "https://json.schemastore.org/staticwebapp.config.json"
+    },
+    {
+      "name": "Azure Static Web Apps CLI configuration file",
+      "description": "Documentation: https://github.com/Azure/static-web-apps-cli#swa-cliconfigjson-file",
+      "fileMatch": [
+        "swa-cli.config.json"
+      ],
+      "url": "https://json.schemastore.org/swa-cli.config.json"
     },
     {
       "name": "StackHead CLI config",
@@ -3293,7 +3358,6 @@
       "description": "Windows Package Manager Singleton Manifest file",
       "url": "https://json.schemastore.org/winget-pkgs-singleton-1.0.0.json",
       "fileMatch": [
-        "manifests/*/*/*.yaml",
         "manifests/?/*/*/*/*.*.yaml"
       ],
       "versions": {
@@ -3547,7 +3611,11 @@
         "**/db/changelog/**/*.yml",
         "**/db/changelog/**/*.json"
       ],
-      "url": "https://json.schemastore.org/liquibase.json"
+      "url": "https://json.schemastore.org/liquibase-3.2.json",
+      "versions": {
+        "1.0": "https://json.schemastore.org/liquibase.json",
+        "3.2": "https://json.schemastore.org/liquibase-3.2.json"
+      }
     },
     {
       "name": "Pipeline component",
@@ -3641,11 +3709,12 @@
     },
     {
       "name": "fulibWorkflows",
-      "description": "JSON Schema for fulib Workflow files.",
+      "description": "JSON Schema for fulibWorkflows",
       "fileMatch": [
-        "*.es.yaml"
+        "*.es.yaml",
+        "*.es.yml"
       ],
-      "url": "https://raw.githubusercontent.com/fujaba/fulibWorkflows/main/schema/fulibWorklows.schema.json"
+      "url": "https://raw.githubusercontent.com/fujaba/fulibWorkflows/main/schemas/fulibWorkflows.schema.json"
     },
     {
       "name": "Woodpecker pipeline config",

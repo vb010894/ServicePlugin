@@ -34,7 +34,7 @@ public class JavaDataGenerator {
     }
 
 
-    public void generate(List<ClassSpecification> specifications, PsiDirectory output) throws IOException {
+    public void generate(List<EntityModel> specifications, PsiDirectory output) throws IOException {
         Map<String, Object> freemarkerDataModel = new HashMap<>();
         Template template = fConfig.getTemplate("TestClassTemplate.ftl");
         String outputPath = output.getVirtualFile().getPath();
@@ -42,7 +42,7 @@ public class JavaDataGenerator {
         specifications.forEach(s -> {
             try {
 
-                File javaSourceFile = new File(outputPath, s.getName() + ".java");
+                File javaSourceFile = new File(outputPath, s.getClassName() + ".java");
                 Writer javaSourceFileWriter = new FileWriter(javaSourceFile);
                 freemarkerDataModel.put("classSpecification", s);
                 template.process(freemarkerDataModel, javaSourceFileWriter);

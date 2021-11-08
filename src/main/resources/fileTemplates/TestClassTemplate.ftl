@@ -1,24 +1,28 @@
 package ${classSpecification.pack};
 
 import lombok.Data;
+import jakarta.persistence.*;
 
 @Entity
-<#if classSpecification.table != "null">
+<#if classSpecification.table??>
 @Table(
-    <#if classSpecification.table.name != "null">
-    name = classSpecification.table.name,
+    <#if classSpecification.table.name??>
+    name = ${classSpecification.table.name},
     </#if>
-    <#if classSpecification.table.catalog != "null">
-    catalog = classSpecification.table.catalog,
+    <#if classSpecification.table.catalog??>
+    catalog = ${classSpecification.table.catalog},
     </#if>
-    <#if classSpecification.table.schema != "null">
-    schema = classSpecification.table.schema,
+    <#if classSpecification.table.schema??>
+    schema = ${classSpecification.table.schema},
     </#if>
     )
 </#if>
+<#if classSpecification.immutable?? && classSpecification.immutable== true>
+@Immutable
+</#if>
 @Data
-public class ${classSpecification.name} {
-    <#list classSpecification.fieldSpecifications as field>
+public class ${classSpecification.className} {
+    <#list classSpecification.fields as field>
         private ${field.type} ${field.name};
     </#list>
 }

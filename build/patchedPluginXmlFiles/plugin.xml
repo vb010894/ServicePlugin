@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>hrabosch_example_cv</id>
   <name>IntelliJ Plugin CV</name>
-  <version>1.0</version>
+  <version>1.1</version>
   <vendor email="your_email@example.com" url="http://www.hrabosch.com">Hrabosch</vendor>
   <description><![CDATA[Example IntelliJ IDEA plugin for blog posts on <a href="http://hrabosch.com/".<br>]]></description>
   <change-notes>Add change notes here.&lt;br&gt;

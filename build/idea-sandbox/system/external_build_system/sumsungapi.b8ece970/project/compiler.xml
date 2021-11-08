@@ -1,7 +1,0 @@
-<project>
-  <component name="ExternalCompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="SumsungAPI" target="15" />
-    </bytecodeTargetLevel>
-  </component>
-</project>

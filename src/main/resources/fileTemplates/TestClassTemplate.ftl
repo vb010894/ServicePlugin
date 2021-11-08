@@ -7,13 +7,13 @@ import jakarta.persistence.*;
 <#if classSpecification.table??>
 @Table(
     <#if classSpecification.table.name??>
-    name = "${classSpecification.table.name}",
+    name = "${classSpecification.table.name}"
     </#if>
     <#if classSpecification.table.catalog??>
-    catalog = "${classSpecification.table.catalog}",
+    catalog = "${classSpecification.table.catalog}"
     </#if>
     <#if classSpecification.table.schema??>
-    schema = "${classSpecification.table.schema}",
+    schema = "${classSpecification.table.schema}"
     </#if>
     )
 </#if>
@@ -23,7 +23,7 @@ import jakarta.persistence.*;
 @Data
 public class ${classSpecification.className} {
     <#list classSpecification.fields as field>
-        <#if field.id?? && field.id == true>
+        <#if field.id??>
         @Id
         </#if>
         private ${field.type} ${field.name};
